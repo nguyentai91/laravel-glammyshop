@@ -25,6 +25,7 @@ class CreateOrdersTable extends Migration
             $table->String('email');
             $table->String('shipping_method');
             $table->String('payment');
+            $table->integer('total_price');
             $table->integer('card_number');
             $table->boolean('status')->default(false);
             $table->timestamps();

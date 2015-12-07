@@ -37,17 +37,18 @@ class CheckoutController extends Controller
 
 //dd($request);
     $order = new Orders();
-    $order->sity      = $request->sity;
-    $order->province  = $request->province;
-    $order->postcode  = $request->postcode;
-    $order->street1   = $request->street1;
-    $order->street2   = $request->street2;
-    $order->firstname     = $request->firstname;
-    $order->lastname     = $request->lastname;
-    $order->phone     = $request->phone;
-    $order->email     = $request->email;
+    $order->sity            = $request->sity;
+    $order->province        = $request->province;
+    $order->postcode        = $request->postcode;
+    $order->street1         = $request->street1;
+    $order->street2         = $request->street2;
+    $order->firstname       = $request->firstname;
+    $order->lastname        = $request->lastname;
+    $order->phone           = $request->phone;
+    $order->email           = $request->email;
     $order->shipping_method  = $request->shipping_method;
-    $order->payment   = $request->payment;
+    $order->payment         = $request->payment;
+    $order->total_price     = $request->total_order;
 //        dd($request->product);
     $order->save();
 

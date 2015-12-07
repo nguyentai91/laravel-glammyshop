@@ -6,6 +6,9 @@ use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Orders;
+use yajra\Datatables\Datatables;
+use App\User;
 
 class CartController extends Controller
 {
@@ -102,5 +105,21 @@ class CartController extends Controller
 
     public function getproduct( $id ) {
         return "asdasd";
+    }
+
+    public function getlist() {
+        $order_list = Orders::all();
+        return Datatables::of($order_list)
+            ->addColumn('action', 'action here')
+            ->addColumn('fullname', function($order_list) {
+                $fullname = $order_list->firstname." ".$order_list->lastname;
+                return $fullname;
+            })
+            ->addColumn('address', function($order_list) {
+                $address = $order_list->street1.", ".$order_list->province.", ".$order_list->sity;
+                return $address;
+            })
+            ->make(true);
+
     }
 }

@@ -58,17 +58,17 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('size/edit/{id}', ['as' => 'admin.size.edit', 'uses' => 'Admin\SizeController@edit']);
     Route::get('size/destroy/{id}', ['as' => 'admin.size.destroy', 'uses' => 'Admin\SizeController@destroy']);
 
-    Route::resource('oder', 'Admin\OderController');
+    Route::resource('order', 'Admin\OrderController');
 
 });
 Route::get('/',['as' => 'frontend.header', 'uses' => 'HomeController@index']);
     Route::get('/',['as' => 'home', 'uses' => 'HomeController@index']);
 
-    Route::get('login', ['as' => 'login', 'uses' => 'Auth\AuthController@login']);
-    Route::post('login', ['as' => 'postlogin', 'uses' => 'Auth\AuthController@postlogin']);
+//    Route::get('login', ['as' => 'login', 'uses' => 'Auth\AuthController@login']);
+//    Route::post('login', ['as' => 'postlogin', 'uses' => 'Auth\AuthController@postlogin']);
 
-    Route::get('register', ['as' => 'acc', 'uses' => 'Auth\AuthController@index']);
-    Route::post('register', ['as' => 'register', 'uses' => 'Auth\AuthController@create']);
+//    Route::get('register', ['as' => 'acc', 'uses' => 'Auth\AuthController@index']);
+//    Route::post('register', ['as' => 'register', 'uses' => 'Auth\AuthController@create']);
 
     Route::get('/product/{cate}/{slug}',['as' => 'frontend.pages.product', 'uses' => 'HomeController@single']);
 
@@ -85,6 +85,7 @@ Route::group(['prefix' => 'api'], function(){
    Route::get('/cart-items', 'CartController@getcartitems');
     Route::get('/product/{id}', 'CartController@getproduct');
     Route::get('/{id}',['as' => 'home1', 'uses' => 'HomeController@getdata']);
+    Route::get('/order/list', ['as' => 'api.order', 'uses' => 'CartController@getlist']);
 
 });
 

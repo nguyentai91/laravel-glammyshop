@@ -72,7 +72,7 @@
 
         <!-- oder -->
         <li>
-            <a href="http://laravel.dev:8888/admin/oder">
+            <a href="http://laravel.dev:8888/admin/order">
                 <i class="fa fa-flask"></i>
                 <span>Order</span>
             </a>

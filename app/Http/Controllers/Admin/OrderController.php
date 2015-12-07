@@ -7,14 +7,16 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Orders;
 
-class OderController extends Controller
+class OrderController extends Controller
 {
 
     public function index()
     {
         $orders = Orders::all();
 
-        return view('admin.oder.index', compact('orders'));
+        return view('admin.order.index', compact('orders'));
     }
+
+
 
 }

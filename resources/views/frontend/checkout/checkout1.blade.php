@@ -39,7 +39,7 @@
                             <!-- Country -->
                     <div class="checkout_form_input country">
                         <label>Country <span class="color_red">*</span></label>
-                        <select class="basic" name="country" >
+                        <select class="basic" id="country" name="country" >
                             <option value="viet nam">Viet Nam</option>
                             <option value="australia">Australia</option>
                             <option value="china">China</option>
@@ -51,25 +51,25 @@
                     <!-- Sity -->
                     <div class="checkout_form_input sity">
                         <label>Sity <span class="color_red">*</span></label>
-                        <input type="text" name="sity" value="" placeholder="" />
+                        <input type="text" id="sity" name="sity" value="" placeholder="" />
                     </div>
 
                     <!-- Province -->
                     <div class="checkout_form_input territory">
                         <label>Province / Territory <span class="color_red">*</span></label>
-                        <input type="text" name="province" value="" placeholder="" />
+                        <input type="text" id="province" name="province" value="" placeholder="" />
                     </div>
 
                     <!-- Postcode -->
                     <div class="checkout_form_input last postcode">
                         <label>Postcode <span class="color_red">*</span></label>
-                        <input type="text" name="postcode" value="" placeholder="" />
+                        <input type="text" id="postcode" name="postcode" value="" placeholder="" />
                     </div>
 
                     <!-- Street1 -->
                     <div class="checkout_form_input2 adress">
                         <label>Street Adress 1 <span class="color_red">*</span></label>
-                        <input type="text" name="street1" value="" placeholder="" />
+                        <input type="text" id="street" name="street1" value="" placeholder="" />
                     </div>
 
                     <!-- Street2 -->
@@ -83,13 +83,13 @@
                     <!-- first name -->
                     <div class="checkout_form_input first_name">
                         <label>First Name <span class="color_red">*</span></label>
-                        <input type="text" name="firstname" value="" placeholder="" />
+                        <input type="text" id="firstname" name="firstname" value="" placeholder="" />
                     </div>
 
                     <!-- Last name -->
                     <div class="checkout_form_input last_name">
                         <label>Last name <span class="color_red">*</span></label>
-                        <input type="text" name="lastname" value="" placeholder="" />
+                        <input type="text" id="lastname" name="lastname" value="" placeholder="" />
                     </div>
 
                     <!-- Phone -->
@@ -101,7 +101,7 @@
                     <!-- email -->
                     <div class="checkout_form_input last E-mail">
                         <label>e-mail <span class="color_red">*</span></label>
-                        <input type="text" name="email" value="" placeholder="" />
+                        <input type="text" id="email" name="email" value="" placeholder="" />
                     </div>
 
                     <div class="clear"></div>
@@ -117,19 +117,19 @@
                     <p class="checkout_title">SHIPPING METHOD</p>
                     <ul >
                         <li>
-                            <input id="ridio1" type="radio" name="shipping_method" value="postal" hidden />
+                            <input id="ridio1" type="radio" class="shipping" name="shipping_method" value="standart_post" hidden />
                             <label for="ridio1">Standard International Post <b>Free  (3-6 week)</b><img src="{!! url('assets/frontend/images/standart_post.jpg') !!}" alt="" /></label>
                         </li>
                         <li>
-                            <input id="ridio2" type="radio" name="shipping_method" value="ups" hidden />
+                            <input id="ridio2" type="radio" class="shipping" name="shipping_method" value="excluseve_post" hidden />
                             <label for="ridio2">Excluseve International Post <b>Postage $ 10 (2-4 week)</b><img src="{!! url('assets/frontend/images/excluseve_post.jpg') !!}" alt="" /></label>
                         </li>
                         <li>
-                            <input id="ridio3" type="radio" name="shipping_method" value="fedex" hidden />
+                            <input id="ridio3" type="radio" class="shipping" name="shipping_method" value="premium_post" hidden />
                             <label for="ridio3">Premium Post <b>Postage $ 50 (1-2 week)</b><img src="assets/frontend/images/premium_post.jpg" alt="" /></label>
                         </li>
                         <li>
-                            <input id="ridio4" type="radio" name="shipping_method" value="dhl" hidden />
+                            <input id="ridio4" type="radio" class="shipping" name="shipping_method" value="vip_post" hidden />
                             <label for="ridio4">For VIP clients <b>$ 100 (3 days)</b><img src="assets/frontend/images/vip_post.jpg" alt="" /></label>
                         </li>
                     </ul>
@@ -150,7 +150,7 @@
                                 <label for="ridio11">Visa<br><img src="assets/frontend/images/visa.jpg" alt="" /></label>
                             </li>
                             <li>
-                                <input id="ridio22" type="radio" name="payment" value="master" hidden />
+                                <input id="ridio22" type="radio" name="payment" value="master_card" hidden />
                                 <label for="ridio22">Master Card<br><img src="assets/frontend/images/master_card.jpg" alt="" /></label>
                             </li>
                             <li>
@@ -211,35 +211,34 @@
                                     <p class="checkout_title margbot10">Billing information</p>
 
                                     <div class="billing_information_content margbot40">
-                                        <span>Balashova Anna</span>
-                                        <span>New York Street name 55</span>
-                                        <span>841 11 Bratislava</span>
-                                        <span>USA</span>
-                                        <span>mymail@glammy.com</span>
+                                        <span class="name"></span>
+                                        <span class="address"></span>
+                                        <span class="postcode1"></span>
+                                        <span class="country1"></span>
+                                        <span class="email1"></span>
                                     </div>
 
                                     <p class="checkout_title margbot10">Shipping adress</p>
 
                                     <div class="billing_information_content margbot40">
-                                        <span>Balashova Anna</span>
-                                        <span>New York Street name 55</span>
-                                        <span>841 11 Bratislava</span>
-                                        <span>USA</span>
-                                        <span>mymail@glammy.com</span>
+                                        <span class="name"></span>
+                                        <span class="address"></span>
+                                        <span class="postcode1"></span>
+                                        <span class="country1"></span>
+                                        <span class="email1"></span>
                                     </div>
                                 </div>
 
                                 <div class="payment_delivery">
                                     <p class="checkout_title margbot10">Payment and delivery</p>
 
-                                    <p><span>Payment:</span> PayPal </p>
-                                    <img src="assets/frontend/images/paypal.jpg" alt="" />
+                                    <p>Payment: <span id="payment"></span></p>
+                                    <span id="logo_payment"></span>
 
-                                    <p><span>Delivery:</span> FedEx Express</p>
-                                    <img src="assets/frontend/images/premium_post.jpg" alt="" />
+                                    <p>Delivery:  <span id="delivery"></span></p>
+                                    <span id="logo_delivery"></span>
                                 </div>
                             </div>
-{{--{!! dd($items) !!}--}}
                             <div class="checkout_confirm_orded_products">
                                 <p class="checkout_title">Products</p>
                                 <ul class="cart-items">
@@ -256,7 +255,6 @@
                             </div>
                         </div>
                     </div>
-{{--{{dd($items)}}--}}
                     <div class="col-lg-3 col-md-3 padbot60">
 
                         <!-- BAG TOTALS -->
@@ -269,11 +267,12 @@
                                 </tr>
                                 <tr class="shipping clearfix">
                                     <th>SHIPPING</th>
-                                    <td>Free</td>
+                                    <td>$<span id="shipping_price"></span></td>
                                 </tr>
                                 <tr class="total clearfix">
                                     <th>Total</th>
-                                    <td>${!! $total !!}</td>
+                                    <td id="total_price">$</td>
+                                    <input type="hidden" name="total_order" id="total_order" value="">
                                 </tr>
                             </table>
                             <input type="submit" class="btn active" value="Place Order">
@@ -319,7 +318,7 @@
             $("#step3").addClass("done_step");
             $("#step3").removeClass("active_step");
             $("#step4").addClass("active_step");
-        })
+        });
 
         $("#previous").on("click", function () {
             $("#checkout3").show();
@@ -329,6 +328,81 @@
             $("#step4").removeClass("active_step");
             $("#step2").addClass("done_step");
             $("#step2").removeClass("done_step2");
-        })
+        });
+
+
+        $("#next3").on("click", function () {
+
+            $(".name").text($("#firstname").val()+ " " + $("#lastname").val());
+            $(".address").text($("#street").val()+", "+$("#province").val()+", "+$("#sity").val());
+            $(".postcode1").text($("#postcode").val());
+            $(".country1").text($("#country").val());
+            $(".email1").text($("#email").val());
+
+            //shipping-method
+            if($("#ridio1").prop("checked")) {
+
+                $("#delivery").text($("#ridio1").val());
+                $("#logo_delivery").append("<img src='assets/frontend/images/"+$("#ridio1").val()+".jpg' alt='' />");
+                $("#shipping_price").append("FREE");
+//                $("#total_order").append()
+
+            } else if($("#ridio2").prop("checked")) {
+
+                $("#delivery").text($("#ridio2").val());
+                $("#logo_delivery").append("<img src='assets/frontend/images/"+$("#ridio2").val()+".jpg' alt='' />");
+                $("#shipping_price").append("10");
+
+            } else if($("#ridio3").prop("checked")) {
+
+                $("#delivery").text($("#ridio3").val());
+                $("#logo_delivery").append("<img src='assets/frontend/images/"+$("#ridio3").val()+".jpg' alt='' />");
+                $("#shipping_price").append("50");
+
+            } else {
+                $("#delivery").text($("#ridio4").val());
+                $("#logo_delivery").append("<img src='assets/frontend/images/"+$("#ridio4").val()+".jpg' alt='' />");
+                $("#shipping_price").append("100");
+
+            }; //end shipping-method
+
+            //payment
+            if($("#ridio11").prop("checked")) {
+
+                $("#payment").text($("#ridio11").val());
+                $("#logo_payment").append("<img src='assets/frontend/images/"+$("#ridio1").val()+".jpg' alt='' />");
+
+            } else if($("#ridio22").prop("checked")) {
+
+                $("#payment").text($("#ridio22").val());
+                $("#logo_payment").append("<img src='assets/frontend/images/"+$("#ridio22").val()+".jpg' alt='' />");
+
+            } else if($("#ridio33").prop("checked")) {
+
+                $("#payment").text($("#ridio33").val());
+                $("#logo_payment").append("<img src='assets/frontend/images/"+$("#ridio33").val()+".jpg' alt='' />");
+
+            } else if($("#ridio44").prop("checked")) {
+
+                $("#payment").text($("#ridio44").val());
+                $("#logo_payment").append("<img src='assets/frontend/images/"+$("#ridio44").val()+".jpg' alt='' />");
+
+            } else {
+                $("#payment").text($("#ridio55").val());
+                $("#logo_payment").append("<img src='assets/frontend/images/"+$("#ridio55").val()+".jpg' alt='' />");
+
+            };
+            {{--alert({!! $total !!})--}}
+            var price_product = Number({!! $total !!});
+            var price_shipping = Number($("#shipping_price").text());
+            var total_price = price_product + price_shipping;
+            $("#total_order").val(
+                   total_price
+            );
+            $("#total_price").append(total_price);
+        });
+
+
+
     </script>
 @stop
